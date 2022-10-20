@@ -1,5 +1,5 @@
 ##Python TExt RPG !!
-## Sai Madhurima LAnka!!
+# Sai Madhurima LAnka!!
 
 import cmd
 import textwrap
@@ -8,8 +8,9 @@ import os
 import time
 import random
 
-screen_width = 100
-spaces =' '
+screen_width = 200
+spaces = ' '
+
 
 ########### Player Setup ##########
 
@@ -22,7 +23,6 @@ class Player:
         self.mp = 0
         self.status_effects = []
         self.location = 'b2'
-        
 
 
 myplayer = Player()
@@ -51,35 +51,45 @@ def title_screen_selections():
 
 def title_screen():
     os.system('cls')
-    print('╭── ⋅ ── ✩ ── ⋅ ⋅ ── ⋅ ⋅ ── ✩ ── ⋅  ─╮')
-    print('|           ── ⋆⋅☆⋅⋆ ──      \t '+  spaces*4 +'|')
-    print('|    WELCOME TO TEXT RPG GAME !'+ spaces* 6 +'|')
-    print('|           ── ⋆⋅☆⋅⋆ ──      \t '+  spaces*4 +'|')
-    print('|             - Play -          '+ spaces*5 +'|')
-    print('|             - Help -          '+ spaces*5 +'|')
-    print('|             - Quit -          '+ spaces*5 +'|')
-    print('|           ── ⋆⋅☆⋅⋆ ──      \t  '+ spaces*3 +'|')
-    print('|       Project by Team : 3      '+ spaces*4 +'|')
-    print('|            ── ⋆⋅☆⋅⋆ ──      \t  '+ spaces*3 +'|')
-    print('╰── ⋅ ── ✩ ── ⋅⋅ ── ⋅ ⋅ ── ✩ ── ⋅  ──╯')
+    print(spaces *4 +'╭── ⋅ ── ✩ ── ⋅ ⋅ ── ⋅ ⋅ ── ✩ ── ⋅  ─╮')
+    print(spaces *5 +'|           ── ⋆⋅☆⋅⋆ ──      \t' + spaces * 4 + '|')
+    print(spaces *5 +'|    WELCOME TO TEXT RPG GAME !' + spaces * 4+'|')
+    print(spaces *5 +'|           ── ⋆⋅☆⋅⋆ ──      \t' + spaces * 4 + '|')
+    print(spaces *5 +'|             - Play -         ' + spaces * 4 + '|')
+    print(spaces *5 +'|             - Help -         ' + spaces * 4 + '|')
+    print(spaces *5 +'|             - Quit -         ' + spaces * 4 + '|')
+    print(spaces *5 +'|            ── ⋆⋅☆⋅⋆ ──    \t  ' + spaces * 2 + '|')
+    print(spaces *5 +'╰── ⋅ ── ✩ ── ⋅⋅ ── ⋅ ⋅ ── ✩ ── ⋅  ──╯')
     title_screen_selections()
 
 
 def help_menu():
-    print('╭── ⋅ ── ✩ ── ⋅ ⋅ ── ⋅ ⋅ ── ✩ ── ⋅  ──╮')
-    print('|           ── ⋆⋅☆⋅⋆ ──      \t '+  spaces*5 +'|')
-    print('|    WELCOME TO TEXT RPG GAME !'+ spaces* 7 +'|')
-    print('|           ── ⋆⋅☆⋅⋆ ──      \t '+  spaces*5 +'|')
-    print('|    - This is the help menu!! -  '+ spaces*4 +'|')
-    print('|   > Use move to naviagte'+ spaces*12+'|')
-    print('|          >>up,down,left,right '+ spaces*6 +'|')
-    print('|   > Use examine/look to interact'+spaces *4 +'|')
-    print('|             HAVE FUN !! '+ spaces*12 +'|')
-    print('|             ── ⋆⋅☆⋅⋆ ──      \t  '+ spaces*4 +'|')
-    print('|       Project by Team : 3      '+ spaces*5 +'|')
-    print('|            ── ⋆⋅☆⋅⋆ ──      \t  '+ spaces*4 +'|')
-    print('╰── ⋅ ── ✩ ── ⋅ ⋅ ── ⋅ ⋅ ── ✩ ── ⋅  ──╯')
+    print(spaces *5 +'╭── ⋅ ── ✩ ── ⋅ ⋅ ── ⋅ ⋅ ── ✩ ── ⋅  ──╮')
+    print(spaces *5 +'|           ── ⋆⋅☆⋅⋆ ──      \t ' + spaces * 5 + '|')
+    print(spaces *5 +'|    WELCOME TO TEXT RPG GAME !' + spaces * 7 + '|')
+    print(spaces *5 +'|           ── ⋆⋅☆⋅⋆ ──      \t ' + spaces * 5 + '|')
+    print(spaces *5 +'|    - This is the help menu!! -  ' + spaces * 4 + '|')
+    print(spaces *5 +'|   > Use move to naviagte' + spaces * 12 + '|')
+    print(spaces *5 +'|          >>up,down,left,right ' + spaces * 6 + '|')
+    print(spaces *5 +'|   > Use examine/look to interact' + spaces * 4 + '|')
+    print(spaces *5 +'|             HAVE FUN !! ' + spaces * 12 + '|')
+    print(spaces *5 +'|             ── ⋆⋅☆⋅⋆ ──      \t  ' + spaces * 4 + '|')
+    print(spaces *5 +'|            ── ⋆⋅☆⋅⋆ ──      \t  ' + spaces * 4 + '|')
+    print(spaces *5 +'╰── ⋅ ── ✩ ── ⋅ ⋅ ── ⋅ ⋅ ── ✩ ── ⋅  ──╯')
     title_screen_selections()
+
+
+def map():
+    print(spaces *5 +spaces *5 +"Opening Map....")
+    print(spaces *5 +"----------------------------------------------------------------------------------------------------------------------------------------------")
+    print(spaces *5 +"| Losfailey, The Spirit Valley | Elvgolsle, Isle ofthe Elves     | Poiwilion, Dominion of the Poisones   | Elvgoltry, The Ancient City       |")
+    print(spaces *5 +"----------------------------------------------------------------------------------------------------------------------------------------------")
+    print(spaces *5 +"| Elvossea , The Etheral Sea   | Golwildom , The Broken Kingdon  | Wartroles , Valees of the warriors    | Losspinds , Lands of the Lost     |")
+    print(spaces *5 +"----------------------------------------------------------------------------------------------------------------------------------------------")
+    print(spaces *5 +"| Elvwizest , THe magic Forset | Trokinrse , The Magic Universe  | Whions , THe White City ofthe Dragons | Spipoiary , The Ancient Sanctuary | ")
+    print(spaces *5 +"----------------------------------------------------------------------------------------------------------------------------------------------")
+    print(spaces *5 +"| Wardranet , THe dark PLanet  | Anggiaxus , Nexus of the Angels | Deawilder , Yonder of the DEad        | Devfrolam , Realm ofthe devils    |")
+    print(spaces *5 +"----------------------------------------------------------------------------------------------------------------------------------------------")
 
 
 ########## Game functionality #########
@@ -107,80 +117,81 @@ LEFT = 'left', 'west'
 RIGHT = 'right', 'east'
 
 solved_places = {'a1': False, 'a2': False, 'a3': False, 'a4': False,
-                'b1': False, 'b2': False, 'b3': False, 'b4': False,
-                'c1': False, 'c2': False, 'c3': False, 'c4': False,
-                'd1': False, 'd2': False, 'd3': False, 'd4': False
-                }
+                 'b1': False, 'b2': False, 'b3': False, 'b4': False,
+                 'c1': False, 'c2': False, 'c3': False, 'c4': False,
+                 'd1': False, 'd2': False, 'd3': False, 'd4': False
+                 }
 zonemap = {'a1': {ZONENAME: 'TOWN ENTRANCE',
-                DESCRIPTION: 'You are ready to explore the town!!',
-                EXAMINATION: 'examine',
-                SOLVED: False,
-                UP: '',
-                DOWN: 'b1',
-                LEFT: '',
-                RIGHT: 'a2',
-                },
-            'a2': {ZONENAME: 'TOWN SQUARE',
-                DESCRIPTION: 'description',
-                EXAMINATION: 'examine',
-                SOLVED: False,
-                UP: '',
-                DOWN: 'b2',
-                LEFT: 'a1',
-                RIGHT: 'a3',
-                },
-            'a3': {ZONENAME: 'TOWN HALL',
-                DESCRIPTION: 'description',
-                EXAMINATION: 'examine',
-                SOLVED: False,
-                UP: '',
-                DOWN: 'b3',
-                LEFT: 'a2',
-                RIGHT: 'a4',
-                },
-            'a4': {ZONENAME: 'MARKET',
-                DESCRIPTION: 'description',
-                EXAMINATION: 'examine',
-                SOLVED: False,
-                UP: '',
-                DOWN: 'b1',
-                LEFT: 'a3',
-                RIGHT: '',
-                },
-            'b1': {ZONENAME: '',
-                DESCRIPTION: 'description',
-                EXAMINATION: 'examine',
-                SOLVED: False,
-                UP: 'a1',
-                DOWN: 'c1',
-                LEFT: '',
-                RIGHT: 'b2'
-                },
-            'b2': {ZONENAME: 'Start',
-                DESCRIPTION: 'You are at the beginning of your adventure !',
-                EXAMINATION: 'You should head to other Zones',
-                SOLVED: False,
-                UP: 'a2',
-                DOWN: 'c2',
-                LEFT: 'b1',
-                RIGHT: 'b3',
-                }
-        }
+                  DESCRIPTION: 'You are ready to explore the town!!',
+                  EXAMINATION: 'examine',
+                  SOLVED: False,
+                  UP: '',
+                  DOWN: 'b1',
+                  LEFT: '',
+                  RIGHT: 'a2',
+                  },
+           'a2': {ZONENAME: 'TOWN SQUARE',
+                  DESCRIPTION: 'description',
+                  EXAMINATION: 'examine',
+                  SOLVED: False,
+                  UP: '',
+                  DOWN: 'b2',
+                  LEFT: 'a1',
+                  RIGHT: 'a3',
+                  },
+           'a3': {ZONENAME: 'TOWN HALL',
+                  DESCRIPTION: 'description',
+                  EXAMINATION: 'examine',
+                  SOLVED: False,
+                  UP: '',
+                  DOWN: 'b3',
+                  LEFT: 'a2',
+                  RIGHT: 'a4',
+                  },
+           'a4': {ZONENAME: 'MARKET',
+                  DESCRIPTION: 'description',
+                  EXAMINATION: 'examine',
+                  SOLVED: False,
+                  UP: '',
+                  DOWN: 'b1',
+                  LEFT: 'a3',
+                  RIGHT: '',
+                  },
+           'b1': {ZONENAME: '',
+                  DESCRIPTION: 'description',
+                  EXAMINATION: 'examine',
+                  SOLVED: False,
+                  UP: 'a1',
+                  DOWN: 'c1',
+                  LEFT: '',
+                  RIGHT: 'b2'
+                  },
+           'b2': {ZONENAME: 'Start',
+                  DESCRIPTION: 'You are at the beginning of your adventure !',
+                  EXAMINATION: 'You should head to other Zones',
+                  SOLVED: False,
+                  UP: 'a2',
+                  DOWN: 'c2',
+                  LEFT: 'b1',
+                  RIGHT: 'b3',
+                  }
+           }
 
 
 ######### GAME INTERACTIVITY ###########
 def print_location():
     print('\n' + ("#" * (4 + len(myplayer.location))))
     print('# ' + myplayer.location.upper() + ' #')
-    print('# ' + zonemap[myplayer.location][DESCRIPTION]+' # ')
+    print('# ' + zonemap[myplayer.location][DESCRIPTION] + ' # ')
     print('\n' + ("#" * (4 + len(myplayer.location))))
 
 
 def prompt():
     print("\n " + '=====================================')
     print("What you would like to do ??")
+    print("Avaliable Commands : \n \t move, go, travel, walk, quit, examine, inspect, interact, look, exit, map ")
     action = input("> ")
-    acceptable_actions = ['move', 'go', 'travel', 'walk', 'quit', 'examine', 'inspect', 'interact', 'look','exit']
+    acceptable_actions = ['move', 'go', 'travel', 'walk', 'quit', 'examine', 'inspect', 'interact', 'look','map']
     while action.lower() not in acceptable_actions:
         print("Unknown action , try again later. \n")
         action = input("> ")
@@ -191,6 +202,9 @@ def prompt():
         player_move()
     elif action.lower() in ['examine', 'inspect', 'interact', 'look']:
         player_examine()
+    elif action.lower() in ['map']:
+        map()
+
 
 def player_move():
     ask = 'Where do you wanna go ?? \n'
@@ -205,8 +219,7 @@ def player_move():
         destination = zonemap[myplayer.location][RIGHT]
         movement_handler(destination)
     elif dest in ['down', 'south']:
-        destination = zonemap[myplayer
-        .location][DOWN]
+        destination = zonemap[myplayer.location][DOWN]
         movement_handler(destination)
 
 
@@ -221,18 +234,22 @@ def player_examine():
         print("Zone is Exhausted !!")
     else:
         print("You can trigger a puzzle here !! ")
-
+        main_game_loop()
     # GAME FUNCTIONALITY ########
+
+
 def start_game():
     return setup_game()
 
+
 def main_game_loop():
-    while  myplayer.game is False:
+    while myplayer.game is False:
+        print("Here")
         prompt()
     # here handle if puzzles have been solved ,explored , boss defeated  etc
 
-def setup_game():
 
+def setup_game():
     os.system('cls')
     question1 = "Hello, What's Your Name ? \n "
     for character in question1:
@@ -243,7 +260,7 @@ def setup_game():
     myplayer.name = player_name
     # JOB SETUP #######
     question2 = "Hello, What role u wanna play ? \n "
-    question2added = "You can play as a warrior, priest or a mage !! \n"
+    question2added = "You can play as a warrior, ghost or a mage !! \n"
     for character in question2:
         sys.stdout.write(character)
         sys.stdout.flush()
@@ -253,7 +270,7 @@ def setup_game():
         sys.stdout.flush()
         time.sleep(0.01)
     player_job = input("> ")
-    valid_jobs = ['warrior', 'mage', 'priest']
+    valid_jobs = ['warrior', 'mage', 'ghost']
     if player_job.lower() in valid_jobs:
         myplayer.job = player_job
         print("You are now a " + player_job + ": \n")
@@ -270,7 +287,7 @@ def setup_game():
         elif myplayer.job == 'mage':
             myplayer.hp = 40
             myplayer.mp = 120
-        elif myplayer.job == 'priest':
+        elif myplayer.job == 'ghost':
             myplayer.hp = 60
             myplayer.mp = 60
 
