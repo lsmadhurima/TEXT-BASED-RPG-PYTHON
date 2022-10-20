@@ -51,14 +51,14 @@ def title_screen_selections():
 
 def title_screen():
     os.system('cls')
-    print(spaces *4 +'╭── ⋅ ── ✩ ── ⋅ ⋅ ── ⋅ ⋅ ── ✩ ── ⋅  ─╮')
-    print(spaces *5 +'|           ── ⋆⋅☆⋅⋆ ──      \t' + spaces * 4 + '|')
-    print(spaces *5 +'|    WELCOME TO TEXT RPG GAME !' + spaces * 4+'|')
-    print(spaces *5 +'|           ── ⋆⋅☆⋅⋆ ──      \t' + spaces * 4 + '|')
-    print(spaces *5 +'|             - Play -         ' + spaces * 4 + '|')
-    print(spaces *5 +'|             - Help -         ' + spaces * 4 + '|')
-    print(spaces *5 +'|             - Quit -         ' + spaces * 4 + '|')
-    print(spaces *5 +'|            ── ⋆⋅☆⋅⋆ ──    \t  ' + spaces * 2 + '|')
+    print(spaces *5 +'╭── ⋅ ── ✩ ── ⋅ ⋅ ── ⋅ ⋅ ── ✩ ── ⋅  ─╮')
+    print(spaces *5 +'|           ── ⋆⋅☆⋅⋆ ──      \t' + spaces * 2 + '|')
+    print(spaces *5 +'|    WELCOME TO TEXT RPG GAME !' + spaces * 6+'|')
+    print(spaces *5 +'|           ── ⋆⋅☆⋅⋆ ──      \t' + spaces * 2 + '|')
+    print(spaces *5 +'|             - Play -         ' + spaces * 6+ '|')
+    print(spaces *5 +'|             - Help -         ' + spaces * 6 + '|')
+    print(spaces *5 +'|             - Quit -         ' + spaces * 6 + '|')
+    print(spaces *5 +'|            ── ⋆⋅☆⋅⋆ ──    \t  '+ '|')
     print(spaces *5 +'╰── ⋅ ── ✩ ── ⋅⋅ ── ⋅ ⋅ ── ✩ ── ⋅  ──╯')
     title_screen_selections()
 
@@ -174,7 +174,98 @@ zonemap = {'a1': {ZONENAME: 'TOWN ENTRANCE',
                   DOWN: 'c2',
                   LEFT: 'b1',
                   RIGHT: 'b3',
-                  }
+                  },
+           'b3': {ZONENAME: 'TOWN ENTRANCE',
+                  DESCRIPTION: 'You are ready to explore the town!!',
+                  EXAMINATION: 'examine',
+                  SOLVED: False,
+                  UP: 'a3',
+                  DOWN: 'c3',
+                  LEFT: 'b2',
+                  RIGHT: 'b4',
+                  },
+           'b4': {ZONENAME: 'TOWN ENTRANCE',
+                  DESCRIPTION: 'You are ready to explore the town!!',
+                  EXAMINATION: 'examine',
+                  SOLVED: False,
+                  UP: 'a4',
+                  DOWN: 'c4',
+                  LEFT: 'b3',
+                  RIGHT: '',
+                  },
+           'c1': {ZONENAME: 'TOWN ENTRANCE',
+                  DESCRIPTION: 'You are ready to explore the town!!',
+                  EXAMINATION: 'examine',
+                  SOLVED: False,
+                  UP: 'b1',
+                  DOWN: 'd1',
+                  LEFT: '',
+                  RIGHT: 'c2',
+                  },
+           'c2': {ZONENAME: 'TOWN ENTRANCE',
+                  DESCRIPTION: 'You are ready to explore the town!!',
+                  EXAMINATION: 'examine',
+                  SOLVED: False,
+                  UP: 'b2',
+                  DOWN: 'd2',
+                  LEFT: 'c1',
+                  RIGHT: 'c3',
+                  },
+           'c3': {ZONENAME: 'TOWN ENTRANCE',
+                  DESCRIPTION: 'You are ready to explore the town!!',
+                  EXAMINATION: 'examine',
+                  SOLVED: False,
+                  UP: 'b3',
+                  DOWN: 'd3',
+                  LEFT: 'c2',
+                  RIGHT: 'c4',
+                  },
+           'c4': {ZONENAME: 'TOWN ENTRANCE',
+                  DESCRIPTION: 'You are ready to explore the town!!',
+                  EXAMINATION: 'examine',
+                  SOLVED: False,
+                  UP: 'b4',
+                  DOWN: 'd4',
+                  LEFT: 'c3',
+                  RIGHT: '',
+                  },
+           'd1': {ZONENAME: 'TOWN ENTRANCE',
+                  DESCRIPTION: 'You are ready to explore the town!!',
+                  EXAMINATION: 'examine',
+                  SOLVED: False,
+                  UP: 'c1',
+                  DOWN: '',
+                  LEFT: '',
+                  RIGHT: 'd2',
+                  },
+           'd2': {ZONENAME: 'TOWN ENTRANCE',
+                  DESCRIPTION: 'You are ready to explore the town!!',
+                  EXAMINATION: 'examine',
+                  SOLVED: False,
+                  UP: 'c2',
+                  DOWN: '',
+                  LEFT: 'd1',
+                  RIGHT: 'd3',
+                  },
+           'd3': {ZONENAME: 'TOWN ENTRANCE',
+                  DESCRIPTION: 'You are ready to explore the town!!',
+                  EXAMINATION: 'examine',
+                  SOLVED: False,
+                  UP: 'c3',
+                  DOWN: '',
+                  LEFT: 'd2',
+                  RIGHT: 'd4',
+                  },
+           'd4': {ZONENAME: 'TOWN ENTRANCE',
+                  DESCRIPTION: 'You are ready to explore the town!!',
+                  EXAMINATION: 'examine',
+                  SOLVED: False,
+                  UP: 'c4',
+                  DOWN: '',
+                  LEFT: 'd3',
+                  RIGHT: '',
+                  },
+           
            }
 
 
@@ -234,7 +325,7 @@ def player_examine():
         print("Zone is Exhausted !!")
     else:
         print("You can trigger a puzzle here !! ")
-        main_game_loop()
+        prompt()
     # GAME FUNCTIONALITY ########
 
 
